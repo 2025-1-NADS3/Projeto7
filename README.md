@@ -14,7 +14,7 @@
 ## Descrição
 
 <p align="center">
-<img src="https://github.com/2025-1-NADS3/Projeto11/blob/main/imagens/fecapass.png" alt="FecaPass" border="0">
+<img src="https://imgur.com/a/e3nvYma" alt="FecapWallet" border="0">
 </p>
 
 
