@@ -14,7 +14,7 @@
 ## Descrição
 
 <p align="center">
-<img src="https://imgur.com/a/e3nvYma" alt="FecapWallet" border="0">
+<img src="https://i.postimg.cc/76J1bHyH/logoinicial.png" alt="FecapWallet" border="0">
 </p>
 
 
