@@ -14,7 +14,7 @@
 ## Descrição
 
 <p align="center">
-<img src="https://i.postimg.cc/76J1bHyH/logoinicial.png" alt="FecapWallet" border="0">
+<img src="https://github.com/2025-1-NADS3/Projeto7/blob/main/imagens/logoinicial.png" alt="FecapWallet" border="0">
 </p>
 
 
