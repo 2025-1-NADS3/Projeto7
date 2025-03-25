@@ -20,8 +20,17 @@
 
 
 <br><br>
-FecaPass é uma plataforma inovadora para a compra de ingressos para eventos e palestras no Teatro FECAP. Com uma interface intuitiva, estudantes e demais interessados podem navegar pelos eventos disponíveis, selecionar ingressos e realizar pagamentos de forma rápida e segura.
-<br><br>
+A FecapWallet é uma plataforma digital desenvolvida para os estudantes da Faculdade FECAP, com o objetivo de facilitar e centralizar os pagamentos acadêmicos e institucionais. Por meio de um cartão digital, os alunos podem realizar transações como:
+
+Pagamento da cantina, exames, mensalidades e produtos da faculdade;
+
+Participação em eventos e atividades com cobrança;
+
+Acompanhamento de saldo, extratos e histórico de uso.
+
+A plataforma oferece uma interface moderna, focada na experiência do usuário, promovendo agilidade, segurança e consciência financeira. A FecapWallet representa um avanço na digitalização dos serviços acadêmicos, tornando a vida universitária mais prática e conectada às novas tecnologias.
+
+
 
 
 ## 🛠 Estrutura de pastas
@@ -57,7 +66,7 @@ Há também 4 pastas que seguem da seguinte forma:
 
 ## 📄 Protótipo no Figma 
 
-Você pode visualizar o protótipo do projeto [aqui](https://www.figma.com/design/2f2lzpHfLMNlusgG5rTXE3/Untitled?node-id=0-1) para conferir o design e a interação.
+Você pode visualizar o protótipo do projeto [aqui](https://www.figma.com/design/FFKh3OlISTtIARq5IODaed/Untitled?node-id=0-1&t=OqLrLoVNe1T6pvQ0-1) para conferir o design e a interação.
 
 
 ## ✔ Linguagens e Tecnologias Usadas
@@ -127,4 +136,15 @@ Você pode visualizar o protótipo do projeto [aqui](https://www.figma.com/desig
 
 
 ## 📋 Licença/License
-Este trabalho está licenciado sob [FecaPass](https://FecaPass)© 2025 de Adriano Xu, Anie Bissoli, Erika Santana e Isabela Nunes, está licenciado sob [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1).
+Este trabalho está licenciado sob [FecapWallet](https://FecapWallet)© 2025 de Diogo Moreira Bomfim, Felipe Lima, João Vitor Cenedeze, Lucas de Oliveira e Matheus Antero, está licenciado sob [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1).
+
+## 🎓 Referências
+
+Aqui estão as referências usadas no projeto.
+
+1. <https://github.com/iuricode/readme-template>
+2. <https://github.com/gabrieldejesus/readme-model>
+3. <https://chooser-beta.creativecommons.org/>
+4. <https://freesound.org/>
+5. <https://www.toptal.com/developers/gitignore>
+6. Músicas por: <a href="https://freesound.org/people/DaveJf/sounds/616544/"> DaveJf </a> e <a href="https://freesound.org/people/DRFX/sounds/338986/"> DRFX </a> ambas com Licença CC 0.
