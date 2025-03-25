@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <!--CORES DO PROJETO-->
+    <color name="btnProximo">#20403D</color>
+    <color name="txtH1">#1E1E2D</color>
+    <color name="txtP">#7E848D</color>
+
+</resources>
