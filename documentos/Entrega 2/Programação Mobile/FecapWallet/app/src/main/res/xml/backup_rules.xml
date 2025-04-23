@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content>
+    <exclude domain="sharedpref" path="device-credentials.xml"/>
+    <exclude domain="database" path="sensitive.db"/>
+    <exclude domain="file" path="encrypted_data/"/>
+    <exclude domain="external" path="FecapWallet/secure/"/>
+</full-backup-content>

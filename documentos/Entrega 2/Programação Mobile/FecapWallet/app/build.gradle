@@ -1,0 +1,81 @@
+plugins {
+    alias(libs.plugins.android.application)
+}
+
+android {
+    namespace 'br.com.aula.fecapwallet'
+    compileSdk 35
+    buildFeatures {
+        buildConfig true  // Habilita a geração do BuildConfig
+        viewBinding true
+    }
+
+    defaultConfig {
+        applicationId "br.com.aula.fecapwallet"
+        minSdk 24
+        targetSdk 35
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        buildConfigField "boolean", "DEBUG_MODE", "false" // Exemplo de campo customizado
+    }
+
+    buildTypes {
+        debug {
+            buildConfigField "boolean", "DEBUG_MODE", "true"
+        }
+        release {
+            buildConfigField "boolean", "DEBUG_MODE", "false"
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    // Adicione este bloco para viewBinding/dataBinding se necessário
+    buildFeatures {
+        viewBinding true
+        // dataBinding true // Descomente se usar data binding
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+}
+
+dependencies {
+    implementation libs.appcompat
+    implementation libs.material
+    implementation libs.activity
+    implementation libs.constraintlayout
+    testImplementation libs.junit
+    androidTestImplementation libs.ext.junit
+    androidTestImplementation libs.espresso.core
+
+    // Room Database
+    implementation "androidx.room:room-runtime:2.6.1"
+    annotationProcessor "androidx.room:room-compiler:2.6.1"
+
+    // Security
+    implementation "androidx.security:security-crypto:1.1.0-alpha06" // Versão mais recente
+    implementation 'androidx.biometric:biometric:1.2.0-alpha05' // Versão mais recente
+
+    // Logging
+    implementation 'com.jakewharton.timber:timber:5.0.1'
+
+    // Firebase
+    implementation platform('com.google.firebase:firebase-bom:32.7.0') // Versão mais recente
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-crashlytics'
+
+    // Lifecycle
+    implementation "androidx.lifecycle:lifecycle-viewmodel:2.6.2"
+    implementation "androidx.lifecycle:lifecycle-livedata:2.6.2"
+    implementation "androidx.lifecycle:lifecycle-common-java8:2.6.2"
+
+    // Adicione estas dependências para evitar conflitos
+    implementation 'androidx.core:core-ktx:1.12.0' // Se estiver usando Kotlin
+    implementation 'com.google.android.gms:play-services-base:18.3.0'
+}

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Permissões necessárias para segurança e funcionalidades -->
+    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+
+    <application
+        android:name=".FecapWalletApplication"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.FecapWallet"
+        android:usesCleartextTraffic="false"
+        tools:targetApi="31">
+
+        <!-- Configuração para AndroidKeyStore -->
+        <meta-data
+            android:name="android.security.keystore"
+            android:value="true" />
+
+        <!-- Atividades principais -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Atividades de autenticação -->
+        <activity
+            android:name=".Activity_Entrar"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateVisible" />
+
+        <activity
+            android:name=".Activity_Cadastro"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateVisible" />
+
+        <!-- Atividades principais do app -->
+        <activity
+            android:name=".Activity_Home"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".Activity_My_card"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".Activity_Estatisticas"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <!-- Atividades de configuração -->
+        <activity
+            android:name=".Activity_Configuracoes"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".Activity_Linguagem"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".Activity_AlterarSenha"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <!-- Atividades de perfil -->
+        <activity
+            android:name=".Activity_Perfil"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".Activity_EditarPerfil"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <!-- Atividades de suporte -->
+        <activity
+            android:name=".Activity_Suporte"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".Activity_Endereco"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".Activity_TermosUso"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <!-- Atividades auxiliares -->
+        <activity
+            android:name=".Activity_Primeira_Tela"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".Activity_segunda_tela"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".Activity_Historico"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+
+
+
+    </application>
+
+</manifest>

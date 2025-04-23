@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity_Estatisticas">
+
+    <!-- Barra inferior -->
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="#E3DFDF"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <!-- HOME -->
+        <LinearLayout
+            android:id="@+id/btnHomeLayout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:focusable="true">
+
+
+            <ImageButton
+                android:id="@+id/imageButton2"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:background="@null"
+                app:srcCompat="@drawable/homeverde" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Home"
+                android:textColor="#20403D"/>
+        </LinearLayout>
+
+        <!-- MEU CARTÃO -->
+        <LinearLayout
+            android:id="@+id/btnMeuCartaoLayout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageButton
+                android:id="@+id/meucartaoicon"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:background="@null"
+                app:srcCompat="@drawable/cardcinza" />
+
+            <TextView
+                android:id="@+id/meucartao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Meu Cartão" />
+        </LinearLayout>
+
+        <!-- ESTATÍSTICAS -->
+        <LinearLayout
+            android:id="@+id/btnEstatisticasLayout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageButton
+                android:id="@+id/estatisticasbutton"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:background="@null"
+                app:srcCompat="@drawable/estatisticacinza" />
+
+            <TextView
+                android:id="@+id/estatisticas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Estatísticas" />
+        </LinearLayout>
+
+        <!-- CONFIGURAÇÕES -->
+        <LinearLayout
+            android:id="@+id/btnConfiguracoesLayout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageButton
+                android:id="@+id/configbutton"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:background="@null"
+                app:srcCompat="@drawable/configcinza" />
+
+            <TextView
+                android:id="@+id/configuracoes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Configurações" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

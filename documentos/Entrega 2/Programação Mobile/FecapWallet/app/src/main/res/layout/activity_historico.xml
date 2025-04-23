@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="391dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.030">
+
+        <ImageButton
+            android:id="@+id/btnVoltar"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/btn_voltar" />
+
+        <TextView
+            android:layout_width="353dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppinsbold"
+            android:gravity="center"
+            android:text="Histórico de transações"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/btnVerTudo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ver tudo"
+            android:textColor="#20403D" />
+    </LinearLayout>
+
+    <!-- Date Filter -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp"
+        android:paddingBottom="16dp">
+
+        <Button
+            android:id="@+id/btnHoje"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hoje"
+            android:textColor="#20403D"
+            android:backgroundTint="#E8F3F1"
+            app:cornerRadius="16dp"/>
+
+        <Button
+            android:id="@+id/btnSemana"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Esta semana"
+            android:layout_marginStart="8dp"
+            android:textColor="#7E848D"
+            android:backgroundTint="#F5F5F5"
+            app:cornerRadius="16dp"/>
+
+        <Button
+            android:id="@+id/btnMes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Este mês"
+            android:layout_marginStart="8dp"
+            android:textColor="#7E848D"
+            android:backgroundTint="#F5F5F5"
+            app:cornerRadius="16dp"/>
+    </LinearLayout>
+
+    <!-- Transactions List -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvTransacoes"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:clipToPadding="false"/>
+</LinearLayout>

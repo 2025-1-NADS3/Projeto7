@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Tela de edição de perfil com formulário de dados pessoais -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header (barra superior com botão voltar e título) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.030">
+
+            <ImageButton
+                android:id="@+id/btnVoltar"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/btn_voltar"
+                android:background="?attr/selectableItemBackgroundBorderless"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppinsbold"
+                android:gravity="center"
+                android:text="Perfil"
+                android:textColor="#20403D"
+                android:textSize="24sp" />
+
+            <View
+                android:layout_width="42dp"
+                android:layout_height="42dp"/>
+        </LinearLayout>
+
+        <!-- Informações do usuário (foto, nome e tipo) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:paddingVertical="24dp">
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/ic_user_profile"
+                android:scaleType="centerCrop"
+                android:background="@drawable/background_circulo"/>
+
+            <TextView
+                android:id="@+id/txtNomeUsuario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Lucas Almeida"
+                android:fontFamily="@font/poppinsbold"
+                android:textColor="#1E1E2D"
+                android:textSize="22sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/txtTipoUsuario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Estudante"
+                android:fontFamily="@font/poppinsregular"
+                android:textColor="#7E848D"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+        <!-- Campo: Nome completo -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nome completo"
+            android:fontFamily="@font/poppinsregular"
+            android:textColor="#7E848D"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"/>
+
+        <EditText
+            android:id="@+id/edtNomeCompleto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/edittext_background"
+            android:fontFamily="@font/poppinsregular"
+            android:text="Lucas Almeida"
+            android:textSize="16sp" />
+
+        <!-- Campo: Endereço de e-mail -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Endereço de email"
+            android:fontFamily="@font/poppinsregular"
+            android:textColor="#7E848D"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"/>
+
+        <EditText
+            android:id="@+id/edtEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/edittext_background"
+            android:fontFamily="@font/poppinsregular"
+            android:inputType="textEmailAddress"
+            android:text="lucasalmeida@gmail.com"
+            android:textSize="16sp" />
+
+        <!-- Campo: Número de telefone -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Número de telefone"
+            android:fontFamily="@font/poppinsregular"
+            android:textColor="#7E848D"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"/>
+
+        <EditText
+            android:id="@+id/edtTelefone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/edittext_background"
+            android:fontFamily="@font/poppinsregular"
+            android:inputType="phone"
+            android:text="+55(11)00000-0000"
+            android:textSize="16sp" />
+
+        <!-- Campo: Data de nascimento -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/poppinsregular"
+            android:text="Data de nascimento"
+            android:textColor="#7E848D"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/edtDataNascimento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/edittext_background"
+            android:focusable="false"
+            android:fontFamily="@font/poppinsregular"
+            android:text="20 Outubro 1999"
+            android:textSize="16sp" />
+
+        <!-- Botão: Salvar Alterações -->
+        <Button
+            android:id="@+id/btnSalvar"
+            android:layout_width="275dp"
+            android:layout_height="63dp"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/btnProximo"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Salvar Alterações"
+            android:textSize="14sp"
+            app:cornerRadius="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.88"
+            android:layout_marginTop="20dp"/>
+    </LinearLayout>
+</ScrollView>
