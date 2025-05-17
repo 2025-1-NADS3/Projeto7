@@ -1,0 +1,64 @@
+<resources>
+    <string name="app_name">FecapWallet</string>
+    <string name="biometric_auth_title">Autenticação FecapWallet</string>
+    <string name="biometric_auth_subtitle">Toque no sensor biométrico para continuar</string>
+    <string name="biometric_activate_title">Ativar autenticação biométrica</string>
+    <string name="biometric_activate_subtitle">Autentique-se para ativar o login com biometria</string>
+    <string name="biometric_not_available">Nenhum sensor biométrico disponível</string>
+    <string name="biometric_none_enrolled">Nenhuma biometria cadastrada</string>
+    <string name="biometric_success">Biometria ativada com sucesso</string>
+    <string name="biometric_deactivated">Biometria desativada</string>
+    <string name="termos_uso_texto">TERMO DE USO – FECAPWALLET\n
+        <string name="configuracoes_titulo">Configurações</string>
+<string name="seguranca_titulo">Segurança</string>
+<string name="biometria_opcao">Login com Biometria</string>
+<string name="alterar_senha_opcao">Alterar Senha</string>
+<string name="biometria_dialog_titulo">Ativar autenticação biométrica</string>
+<string name="biometria_dialog_subtitulo">Autentique-se para ativar o login com biometria</string>
+\n
+Última atualização: [21-04-2025]\n
+\n
+Bem-vindo ao FecapWallet! Este Termo de Uso regula o uso do aplicativo FecapWallet, desenvolvido com o objetivo de facilitar o gerenciamento de dados financeiros e acadêmicos vinculados à vida estudantil na FECAP.\n
+\n
+Ao acessar ou usar o aplicativo, você concorda com os termos e condições abaixo. Caso não concorde, recomendamos que não utilize o aplicativo.\n
+\n
+1. OBJETIVO DO APLICATIVO\n
+O FecapWallet é um aplicativo destinado a estudantes, com foco em funcionalidades como:\n
+- Visualização de saldo e transações da carteira digital;\n
+- Consulta de extrato e histórico de movimentações;\n
+- Gerenciamento de pagamentos (cantina, boletos, biblioteca, etc.);\n
+- Acesso rápido a dados acadêmicos vinculados ao usuário.\n
+\n
+2. CADASTRO E SEGURANÇA\n
+O uso do FecapWallet requer cadastro com informações verídicas como nome, e-mail, CPF e senha.\n
+Você é responsável por manter sua conta segura e confidencial. Não compartilhe sua senha com terceiros.\n
+Em caso de suspeita de acesso não autorizado, notifique imediatamente os desenvolvedores.\n
+\n
+3. USO ADEQUADO\n
+O usuário compromete-se a utilizar o app de maneira ética, segura e conforme a legislação vigente.\n
+É proibido:\n
+- Usar o aplicativo para fins ilegais ou prejudiciais;\n
+- Tentar burlar, invadir ou comprometer a segurança do sistema;\n
+- Distribuir, copiar ou modificar o app sem autorização.\n
+\n
+4. PROPRIEDADE INTELECTUAL\n
+Todos os direitos sobre o FecapWallet, incluindo seu nome, logo, interface e código, são reservados aos desenvolvedores. Nenhum conteúdo do aplicativo pode ser reproduzido sem autorização prévia.\n
+\n
+5. LIMITAÇÃO DE RESPONSABILIDADE\n
+O aplicativo é fornecido “como está”, sem garantias de funcionamento ininterrupto ou livre de erros.\n
+Os desenvolvedores não se responsabilizam por perdas de dados, falhas de conexão ou qualquer dano indireto causado pelo uso do app.\n
+\n
+6. PRIVACIDADE DOS DADOS\n
+Os dados dos usuários são utilizados exclusivamente para fins de funcionamento do aplicativo.\n
+Nenhuma informação pessoal será vendida ou compartilhada com terceiros sem o consentimento do usuário, exceto quando exigido por lei.\n
+\n
+7. ALTERAÇÕES NO TERMO\n
+Este termo poderá ser atualizado a qualquer momento. A versão mais recente estará sempre disponível no aplicativo. Recomendamos que você revise este documento periodicamente.\n
+\n
+8. CONTATO\n
+Em caso de dúvidas, sugestões ou problemas com o app, entre em contato pelo e-mail: [fecapwallet@fecapwallet.com]\n
+\n
+Ao utilizar o FecapWallet, você declara estar ciente e de acordo com este Termo de Uso.</string>
+
+
+</resources>
