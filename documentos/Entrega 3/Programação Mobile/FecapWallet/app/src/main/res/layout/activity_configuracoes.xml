@@ -21,13 +21,13 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintVertical_bias="0.030">
 
-        <ImageView
-            android:id="@+id/voltarparahome"
-            android:layout_width="0dp"
-            android:layout_height="42dp"
-            android:layout_weight="0.5"
-            android:scaleType="centerInside"
-            app:srcCompat="@drawable/btn_voltar" />
+        <ImageButton
+            android:id="@+id/btnVoltar"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/btn_voltar"
+            android:onClick="voltarHome" />
 
         <TextView
             android:id="@+id/textView4"
@@ -281,7 +281,7 @@
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:src="@drawable/ic_fingerprint"
-                android:tint="#20403D"/>
+                />
 
             <TextView
                 android:layout_width="0dp"
@@ -305,6 +305,7 @@
             android:background="#EEEEEE"/>
         </LinearLayout>
 
+    <!-- Barra de navegação inferior -->
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="0dp"

@@ -18,8 +18,10 @@ public class Activity_Home extends AppCompatActivity {
 
         // Configuração do usuário
         TextView textViewNome = findViewById(R.id.textView2);
+        TextView textViewTitular = findViewById(R.id.card_holder);
         SharedPreferences preferences = getSharedPreferences("user_data", MODE_PRIVATE);
         textViewNome.setText(preferences.getString("nome", "Usuário") + "!");
+        textViewTitular.setText(preferences.getString("nome", "Usuário"));
 
         // Configuração dos botões da bottom navigation
         ImageButton btnPerfil = findViewById(R.id.imageButton); // Botão do perfil no header

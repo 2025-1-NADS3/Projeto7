@@ -7,52 +7,58 @@
     android:layout_height="match_parent"
     tools:context=".Activity_Home">
 
-    <!-- Botão circular com imagem -->
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="65dp"
-        android:layout_height="65dp"
-        android:background="@drawable/background_circulo"
-        android:padding="4dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/ic_user_profile"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.08"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.051" />
-
-    <!-- Texto de Boas-vindas -->
-    <TextView
-        android:id="@+id/bemvindo"
-        android:layout_width="wrap_content"
+    <!-- Informações superiores -->
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/poppinsregular"
-        android:text="Bem vindo de volta,"
-        android:textColor="@color/cinza_medio"
-        android:textSize="10sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@android:color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout4"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.40"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.070" />
+        app:layout_constraintVertical_bias="0.050">
 
-    <!-- Nome do usuário -->
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="NOME DO USUÁRIO"
-        android:textSize="12sp"
-        android:fontFamily="@font/poppinsmedium"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.40"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.10" />
+        <!-- Imagem de Perfil -->
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/background_circulo"
+            android:padding="6dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/profileimg" />
+
+        <!-- Container de Texto -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/bemvindo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsregular"
+                android:text="Bem vindo de volta,"
+                android:textColor="@color/cinza_medio"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsbold"
+                android:text="Matheus Antero da Silva!"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+    </LinearLayout>
 
     <!-- Cartão -->
     <androidx.cardview.widget.CardView
@@ -105,7 +111,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:fontFamily="@font/poppinsregular"
-                android:text="Matheus Antero"
+                android:text=""
                 android:textColor="#FFFFFF"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -275,6 +281,7 @@
 
     <!-- Gastos -->
     <LinearLayout
+        android:id="@+id/linearLayout4"
         android:layout_width="0dp"
         android:layout_height="270dp"
         android:layout_marginStart="10dp"
@@ -318,8 +325,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:fontFamily="@font/poppinsbold"
                 android:gravity="center"
-                android:text="-----"
+                android:text="- R$ 18,00"
                 android:textAlignment="center" />
         </LinearLayout>
 
@@ -353,8 +361,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:fontFamily="@font/poppinsbold"
                 android:gravity="center"
-                android:text="-----"
+                android:text="- R$ 18,00"
                 android:textAlignment="center" />
         </LinearLayout>
 
@@ -388,8 +397,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:fontFamily="@font/poppinsbold"
                 android:gravity="center"
-                android:text="-----"
+                android:text="- R$ 18,00"
                 android:textAlignment="center" />
         </LinearLayout>
 
@@ -423,8 +433,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:fontFamily="@font/poppinsbold"
                 android:gravity="center"
-                android:text="-----"
+                android:text="- R$ 18,00"
                 android:textAlignment="center" />
         </LinearLayout>
 
@@ -458,8 +469,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:fontFamily="@font/poppinsbold"
                 android:gravity="center"
-                android:text="-----"
+                android:text="- R$ 18,00"
                 android:textAlignment="center" />
         </LinearLayout>
     </LinearLayout>

@@ -3,6 +3,7 @@ package br.com.aula.fecapwallet;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.Switch;
 import androidx.appcompat.app.AppCompatActivity;
@@ -32,7 +33,6 @@ public class Activity_Configuracoes extends AppCompatActivity {
         // Listener para o switch de biometria
         switchBiometria.setOnCheckedChangeListener((buttonView, isChecked) -> {
             if (isChecked) {
-                // Solicitar autenticação biométrica para ativar
                 BiometricAuthHelper.showBiometricPrompt(
                         this,
                         "Ativar autenticação biométrica",
@@ -44,7 +44,6 @@ public class Activity_Configuracoes extends AppCompatActivity {
                                         .putBoolean("biometria_ativa", true)
                                         .apply();
                             }
-
                             @Override
                             public void onAuthenticationError(int errorCode, CharSequence errString) {
                                 switchBiometria.setChecked(false);
@@ -79,5 +78,11 @@ public class Activity_Configuracoes extends AppCompatActivity {
         findViewById(R.id.alterarSenhaLayout).setOnClickListener(v -> {
             startActivity(new Intent(this, Activity_AlterarSenha.class));
         });
+    }
+
+    // Metodo chamado pelo botão via android:onClick no XML
+    public void voltarHome(View view) {
+        Intent intent = new Intent(Activity_Configuracoes.this, Activity_Home.class);
+        startActivity(intent);
     }
 }

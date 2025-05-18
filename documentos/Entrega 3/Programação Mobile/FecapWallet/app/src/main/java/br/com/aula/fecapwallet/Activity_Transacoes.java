@@ -2,6 +2,7 @@ package br.com.aula.fecapwallet;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.LinearLayout;
 
 import androidx.activity.EdgeToEdge;
@@ -42,5 +43,12 @@ public class Activity_Transacoes extends AppCompatActivity {
         btnConfiguracoes.setOnClickListener(v -> {
             startActivity(new Intent(this, Activity_Configuracoes.class));
         });
+    }
+
+    // Metodo chamado pelo botão via android:onClick no XML
+    public void voltarHome(View view) {
+        Intent intent = new Intent(Activity_Transacoes.this, Activity_Home.class);
+        startActivity(intent);
+        finish();
     }
 }

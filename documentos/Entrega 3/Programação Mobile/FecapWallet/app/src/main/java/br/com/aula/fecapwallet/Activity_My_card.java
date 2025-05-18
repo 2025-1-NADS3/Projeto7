@@ -1,6 +1,8 @@
 package br.com.aula.fecapwallet;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View; // Import necessário para o método onClick
 import android.widget.SeekBar;
 import android.widget.TextView;
 
@@ -51,5 +53,12 @@ public class Activity_My_card extends AppCompatActivity {
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) { }
         });
+    }
+
+    // Metodo chamado pelo botão via android:onClick no XML
+    public void voltarHome(View view) {
+        Intent intent = new Intent(Activity_My_card.this, Activity_Home.class);
+        startActivity(intent);
+        finish();
     }
 }
