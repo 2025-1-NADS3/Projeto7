@@ -167,8 +167,12 @@
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="220dp"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/borda_arredondada"
+        android:elevation="2dp"
         android:orientation="vertical"
+        android:padding="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -179,7 +183,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="54dp"
+            android:layout_height="50dp"
             android:gravity="center"
             android:orientation="horizontal">
 
@@ -211,16 +215,15 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:fontFamily="@font/poppinsbold"
-                android:gravity="center"
-                android:text="- R$ 18,00"
-                android:textAlignment="center" />
+                android:text="- R$ 10,00"
+                android:textAlignment="textEnd" />
 
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="54dp"
+            android:layout_height="50dp"
             android:orientation="horizontal">
 
             <ImageView
@@ -249,15 +252,15 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:fontFamily="@font/poppinsbold"
-                android:gravity="center"
-                android:text="- R$ 18,00"
-                android:textAlignment="center" />
+                android:text="- R$ 1649,90"
+                android:textAlignment="textEnd"
+                 />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="54dp"
+            android:layout_height="50dp"
             android:orientation="horizontal">
 
             <ImageView
@@ -286,16 +289,15 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:fontFamily="@font/poppinsbold"
-                android:gravity="center"
-                android:text="- R$ 18,00"
-                android:textAlignment="center" />
+                android:text="- R$ 59,90"
+                android:textAlignment="textEnd" />
 
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="54dp"
+            android:layout_height="50dp"
             android:orientation="horizontal">
 
             <ImageView
@@ -324,9 +326,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:fontFamily="@font/poppinsbold"
-                android:gravity="center"
                 android:text="- R$ 18,00"
-                android:textAlignment="center" />
+                android:textAlignment="textEnd" />
 
         </LinearLayout>
 
