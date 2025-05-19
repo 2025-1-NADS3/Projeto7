@@ -74,10 +74,32 @@ public class Activity_Configuracoes extends AppCompatActivity {
             startActivity(new Intent(this, Activity_Home.class));
         });
 
+        // Listener para Linguagem
+        findViewById(R.id.linguagemLayout).setOnClickListener(v -> {
+            startActivity(new Intent(this, Activity_Linguagem.class));
+        });
+
+        // Listener para Meu Perfil
+        findViewById(R.id.perfilLayout).setOnClickListener(v -> {
+            startActivity(new Intent(this, Activity_EditarPerfil.class));
+        });
+
+        // Listener para contate-nos
+        findViewById(R.id.contatoLayout).setOnClickListener(v -> {
+            startActivity(new Intent(this, Activity_Suporte.class));
+        });
+
         // Listener para alterar senha
         findViewById(R.id.alterarSenhaLayout).setOnClickListener(v -> {
             startActivity(new Intent(this, Activity_AlterarSenha.class));
         });
+
+        // Listener para Politica de Privacidade
+        findViewById(R.id.privacidadeLayout).setOnClickListener(v -> {
+            startActivity(new Intent(this, Activity_TermosUso.class));
+        });
+
+
     }
 
     // Metodo chamado pelo botão via android:onClick no XML
