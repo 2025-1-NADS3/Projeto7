@@ -3,12 +3,19 @@ package br.com.aula.fecapwallet;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
+import javax.crypto.SecretKey;
+import br.com.aula.fecapwallet.security.CryptoHelper;
+import br.com.aula.fecapwallet.security.KeyStoreHelper;
 
 public class Activity_Home extends AppCompatActivity {
+
+    private UsuarioDAO usuarioDAO;
+    private SharedPreferences preferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,20 +23,43 @@ public class Activity_Home extends AppCompatActivity {
         setContentView(R.layout.activity_home);
         BottomNavigationHelper.setupBottomNavigation(this);
 
-        // Configuração do usuário
+        preferences = getSharedPreferences("user_data", MODE_PRIVATE);
+        usuarioDAO = new UsuarioDAO(this);
+
         TextView textViewNome = findViewById(R.id.textView2);
         TextView textViewTitular = findViewById(R.id.card_holder);
-        SharedPreferences preferences = getSharedPreferences("user_data", MODE_PRIVATE);
-        textViewNome.setText(preferences.getString("nome", "Usuário") + "!");
-        textViewTitular.setText(preferences.getString("nome", "Usuário"));
+
+        try {
+            String emailLogado = preferences.getString("email_logado", null);
+
+            if (emailLogado != null) {
+                String nomeUsuario = usuarioDAO.getNomePorEmail(emailLogado);
+
+                if (nomeUsuario != null) {
+                    textViewNome.setText(nomeUsuario + "!");
+                    textViewTitular.setText(nomeUsuario);
+                } else {
+                    textViewNome.setText("Usuário!");
+                    textViewTitular.setText("Usuário");
+                }
+            } else {
+                Log.e("Activity_Home", "email_logado está nulo.");
+                textViewNome.setText("Usuário!");
+                textViewTitular.setText("Usuário");
+            }
+
+        } catch (Exception e) {
+            Log.e("Activity_Home", "Erro ao recuperar nome do usuário", e);
+            textViewNome.setText("Usuário!");
+            textViewTitular.setText("Usuário");
+        }
 
         // Configuração dos botões da bottom navigation
-        ImageButton btnPerfil = findViewById(R.id.imageButton); // Botão do perfil no header
+        ImageButton btnPerfil = findViewById(R.id.imageButton);
         btnPerfil.setOnClickListener(v -> {
             startActivity(new Intent(this, Activity_Perfil.class));
         });
 
-        // Bottom Navigation
         LinearLayout btnMeuCartao = findViewById(R.id.btnMeuCartaoLayout);
         LinearLayout btnTransacoes = findViewById(R.id.btnTransacoesLayout);
         LinearLayout btnConfiguracoes = findViewById(R.id.btnConfiguracoesLayout);

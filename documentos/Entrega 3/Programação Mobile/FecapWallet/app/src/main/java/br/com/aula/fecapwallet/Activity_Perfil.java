@@ -14,10 +14,14 @@ import androidx.core.content.ContextCompat;
 
 public class Activity_Perfil extends AppCompatActivity {
 
+    private UsuarioDAO usuarioDAO;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_perfil);
+
+        usuarioDAO = new UsuarioDAO(this);
 
         // Initialize components
         ImageButton btnVoltar = findViewById(R.id.btnVoltar);
@@ -39,43 +43,48 @@ public class Activity_Perfil extends AppCompatActivity {
 
     private void loadUserData(TextView txtNome, TextView txtTipo) {
         SharedPreferences preferences = getSharedPreferences("user_data", MODE_PRIVATE);
-        txtNome.setText(preferences.getString("nome", "Lucas Almeida"));
+        String emailLogado = preferences.getString("email_logado", null);
+
+        if (emailLogado != null) {
+            String nomeUsuario = usuarioDAO.getNomePorEmail(emailLogado);
+
+            if (nomeUsuario != null) {
+                txtNome.setText(nomeUsuario);
+            } else {
+                txtNome.setText("Usuário");
+            }
+        } else {
+            txtNome.setText("Usuário");
+        }
+
+        // Tipo pode continuar vindo do SharedPreferences se for um valor estático
         txtTipo.setText(preferences.getString("tipo", "Estudante"));
     }
 
     private void setupMenuNavigation() {
-        // Personal Information
         findViewById(R.id.btnInformacoes).setOnClickListener(v ->
                 startActivity(new Intent(this, Activity_EditarPerfil.class)));
 
-        // Payment Preferences
         findViewById(R.id.btnPagamentos).setOnClickListener(v ->
                 startActivity(new Intent(this, Activity_Home.class)));
 
-        // Banks and Cards
         findViewById(R.id.btnBancos).setOnClickListener(v ->
                 startActivity(new Intent(this, Activity_My_card.class)));
 
-        // Notifications
         findViewById(R.id.btnNotificacoes).setOnClickListener(v ->
                 startActivity(new Intent(this, Activity_Historico.class)));
 
-        // Message Center
         findViewById(R.id.btnMensagens).setOnClickListener(v ->
                 startActivity(new Intent(this, Activity_Suporte.class)));
 
-        // Address
         findViewById(R.id.btnEndereco).setOnClickListener(v ->
                 startActivity(new Intent(this, Activity_Endereco.class)));
 
-        // Settings
         findViewById(R.id.btnConfiguracoes).setOnClickListener(v ->
                 startActivity(new Intent(this, Activity_Configuracoes.class)));
     }
 
     private void checkItemStates() {
-        SharedPreferences prefs = getSharedPreferences("app_prefs", MODE_PRIVATE);
-
         configureItemState(
                 R.id.btnInformacoes,
                 R.id.iconeInformacoes,

@@ -20,12 +20,7 @@
             android:orientation="horizontal"
             android:gravity="center_vertical"
             android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintVertical_bias="0.030">
+            android:layout_marginEnd="16dp">
 
             <ImageButton
                 android:id="@+id/btnVoltar"
@@ -58,18 +53,19 @@
             android:paddingVertical="24dp">
 
             <ImageView
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:src="@drawable/ic_user_profile"
+                android:layout_width="105dp"
+                android:layout_height="108dp"
+                android:padding="16dp"
+                android:background="@drawable/background_circulo"
                 android:scaleType="centerCrop"
-                android:background="@drawable/background_circulo"/>
+                android:src="@drawable/profileimg" />
 
             <TextView
-                android:id="@+id/txtNomeUsuario"
+                android:id="@+id/titulo_nome_usuario"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="Lucas Almeida"
+                android:text="Nome do Usuário"
                 android:fontFamily="@font/poppinsbold"
                 android:textColor="#1E1E2D"
                 android:textSize="22sp"
@@ -103,7 +99,6 @@
             android:layout_marginTop="8dp"
             android:background="@drawable/edittext_background"
             android:fontFamily="@font/poppinsregular"
-            android:text="Lucas Almeida"
             android:textSize="16sp" />
 
         <!-- Campo: Endereço de e-mail -->
@@ -124,7 +119,7 @@
             android:background="@drawable/edittext_background"
             android:fontFamily="@font/poppinsregular"
             android:inputType="textEmailAddress"
-            android:text="lucasalmeida@gmail.com"
+            android:enabled="false"
             android:textSize="16sp" />
 
         <!-- Campo: Número de telefone -->
@@ -145,7 +140,6 @@
             android:background="@drawable/edittext_background"
             android:fontFamily="@font/poppinsregular"
             android:inputType="phone"
-            android:text="+55(11)00000-0000"
             android:textSize="16sp" />
 
         <!-- Campo: Data de nascimento -->
@@ -166,7 +160,6 @@
             android:background="@drawable/edittext_background"
             android:focusable="false"
             android:fontFamily="@font/poppinsregular"
-            android:text="20 Outubro 1999"
             android:textSize="16sp" />
 
         <!-- Botão: Salvar Alterações -->
@@ -180,11 +173,7 @@
             android:text="Salvar Alterações"
             android:textSize="14sp"
             app:cornerRadius="15dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.88"
-            android:layout_marginTop="20dp"/>
+            android:layout_marginTop="20dp" />
+
     </LinearLayout>
 </ScrollView>
