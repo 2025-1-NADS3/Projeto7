@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Enviar">
+
+    <!-- Botão de voltar -->
+    <ImageView
+        android:id="@+id/img_voltar"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        app:srcCompat="@drawable/btn_voltar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Conteúdo rolável -->
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/img_voltar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="30dp"
+            android:paddingTop="40dp"
+            android:paddingEnd="30dp">
+
+            <!-- Título -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Enviar Dinheiro"
+                android:textSize="26sp"
+                android:textColor="#1E1E2D"
+                android:fontFamily="@font/poppinsbold" />
+
+            <!-- Valor -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Valor"
+                android:textColor="#7E848D"
+                android:textSize="16sp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/poppinsbold" />
+
+            <EditText
+                android:id="@+id/input_valor_enviar"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:hint="R$ 0,00"
+                android:gravity="center"
+                android:textSize="22sp"
+                android:inputType="numberDecimal"
+                android:fontFamily="@font/poppinsbold"
+                android:background="@drawable/borda_arredondada" />
+
+            <!-- Chave Pix -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Chave Pix (e-mail, telefone ou CPF)"
+                android:textColor="#7E848D"
+                android:textSize="16sp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/poppinsbold" />
+
+            <EditText
+                android:id="@+id/input_chave_pix"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:hint="ex: joao@email.com"
+                android:inputType="textEmailAddress"
+                android:fontFamily="@font/poppinsregular"
+                android:textSize="14sp"
+                 />
+
+            <!-- Mensagem opcional -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mensagem (opcional)"
+                android:textColor="#7E848D"
+                android:textSize="16sp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/poppinsbold" />
+
+            <EditText
+                android:id="@+id/input_mensagem"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:hint="Escreva uma mensagem"
+                android:inputType="text"
+                android:fontFamily="@font/poppinsregular"
+                android:textSize="14sp"
+                 />
+
+            <!-- Botão Enviar -->
+            <Button
+                android:id="@+id/btn_enviar"
+                android:layout_width="match_parent"
+                android:layout_height="63dp"
+                android:layout_marginTop="30dp"
+                android:backgroundTint="#20403D"
+                android:text="Enviar"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:fontFamily="@font/poppinsmedium"
+                app:cornerRadius="15dp" />
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

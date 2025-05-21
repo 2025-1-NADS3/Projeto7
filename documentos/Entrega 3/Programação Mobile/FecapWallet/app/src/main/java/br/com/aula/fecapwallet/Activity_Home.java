@@ -7,8 +7,9 @@ import android.util.Log;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
 import androidx.appcompat.app.AppCompatActivity;
-import javax.crypto.SecretKey;
+
 import br.com.aula.fecapwallet.security.CryptoHelper;
 import br.com.aula.fecapwallet.security.KeyStoreHelper;
 
@@ -54,7 +55,7 @@ public class Activity_Home extends AppCompatActivity {
             textViewTitular.setText("Usuário");
         }
 
-        // Configuração dos botões da bottom navigation
+        // Navegação dos botões inferiores
         ImageButton btnPerfil = findViewById(R.id.imageButton);
         btnPerfil.setOnClickListener(v -> {
             startActivity(new Intent(this, Activity_Perfil.class));
@@ -76,10 +77,26 @@ public class Activity_Home extends AppCompatActivity {
             startActivity(new Intent(this, Activity_Configuracoes.class));
         });
 
-        // Ativa o ícone da Home na bottom bar
+        // Ativa o ícone da Home na barra inferior
         ImageButton btnHomeIcon = findViewById(R.id.imageButton2);
         btnHomeIcon.setImageResource(R.drawable.homeverde);
         TextView txtHome = findViewById(R.id.textView10);
         txtHome.setTextColor(getResources().getColor(R.color.verde_fecap));
+
+        // === NOVOS BOTÕES FUNCIONAIS ===
+
+        // Botão "Enviar"
+        ImageButton btnEnviar = findViewById(R.id.imageButton6);
+        btnEnviar.setOnClickListener(v -> {
+            Intent intent = new Intent(Activity_Home.this, Enviar.class);
+            startActivity(intent);
+        });
+
+        // Botão "Recarga"
+        ImageButton btnRecarga = findViewById(R.id.imageButton8);
+        btnRecarga.setOnClickListener(v -> {
+            Intent intent = new Intent(Activity_Home.this, Recarga.class);
+            startActivity(intent);
+        });
     }
 }
