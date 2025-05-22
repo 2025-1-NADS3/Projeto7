@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_cartao"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <!-- Botão voltar -->
+    <ImageView
+        android:id="@+id/img_voltar"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        app:srcCompat="@drawable/btn_voltar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/img_voltar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
+            android:paddingTop="40dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_titulo_cartao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pagamento via Cartão"
+                android:textSize="26sp"
+                android:textColor="#1E1E2D"
+                android:fontFamily="@font/poppinsbold" />
+
+            <!-- Número do Cartão -->
+            <EditText
+                android:id="@+id/input_num_cartao"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/borda_cinza"
+                android:hint="Número do Cartão"
+                android:inputType="number"
+                android:maxLength="16"
+                android:fontFamily="@font/poppinsbold"
+                android:textSize="18sp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp" />
+
+            <!-- Nome no Cartão -->
+            <EditText
+                android:id="@+id/input_nome_cartao"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/borda_cinza"
+                android:hint="Nome no Cartão"
+                android:inputType="textPersonName"
+                android:fontFamily="@font/poppinsbold"
+                android:textSize="18sp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp" />
+
+            <!-- Validade e CVV lado a lado -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:weightSum="2">
+
+                <EditText
+                    android:id="@+id/input_validade_cartao"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/borda_cinza"
+                    android:hint="Validade (MM/AA)"
+                    android:inputType="text"
+                    android:maxLength="5"
+                    android:fontFamily="@font/poppinsbold"
+                    android:textSize="18sp"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp" />
+
+                <EditText
+                    android:id="@+id/input_cvv_cartao"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/borda_cinza"
+                    android:hint="CVV"
+                    android:inputType="numberPassword"
+                    android:maxLength="3"
+                    android:fontFamily="@font/poppinsbold"
+                    android:textSize="18sp"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_confirmar_cartao"
+                android:layout_width="match_parent"
+                android:layout_height="63dp"
+                android:layout_marginTop="40dp"
+                android:backgroundTint="#20403D"
+                android:text="Confirmar Pagamento"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:fontFamily="@font/poppinsmedium"
+                app:cornerRadius="15dp" />
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

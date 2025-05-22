@@ -66,61 +66,103 @@
                 android:weightSum="4">
 
                 <Button
+                    android:id="@+id/btn10"
                     android:layout_width="0dp"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:layout_height="50dp"
+                    android:background="@drawable/borda_cinza"
+                    android:backgroundTint="#FFFFFF"
+                    android:fontFamily="@font/poppinsmedium"
                     android:text="R$ 10"
                     android:textColor="#000"
-                    android:backgroundTint="#FFFFFF"
-                    android:background="@drawable/borda_cinza"
-                    android:fontFamily="@font/poppinsmedium" />
+                    android:textSize="12dp" />
 
                 <Button
+                    android:id="@+id/btn20"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="50dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/borda_cinza"
+                    android:backgroundTint="#FFFFFF"
+                    android:fontFamily="@font/poppinsmedium"
                     android:text="R$ 20"
                     android:textColor="#000"
-                    android:backgroundTint="#FFFFFF"
-                    android:background="@drawable/borda_cinza"
-                    android:fontFamily="@font/poppinsmedium"
-                    android:layout_marginStart="8dp" />
+                    android:textSize="12dp" />
 
                 <Button
+                    android:id="@+id/btn50"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="50dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/borda_cinza"
+                    android:backgroundTint="#FFFFFF"
+                    android:fontFamily="@font/poppinsmedium"
                     android:text="R$ 50"
                     android:textColor="#000"
-                    android:backgroundTint="#FFFFFF"
-                    android:background="@drawable/borda_cinza"
-                    android:fontFamily="@font/poppinsmedium"
-                    android:layout_marginStart="8dp" />
+                    android:textSize="11dp" />
 
                 <Button
+                    android:id="@+id/btn100"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="50dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/borda_cinza"
+                    android:backgroundTint="#FFFFFF"
+                    android:fontFamily="@font/poppinsmedium"
                     android:text="R$ 100"
                     android:textColor="#000"
-                    android:backgroundTint="#FFFFFF"
-                    android:background="@drawable/borda_cinza"
-                    android:fontFamily="@font/poppinsmedium"
-                    android:layout_marginStart="8dp" />
+                    android:textSize="10dp" />
             </LinearLayout>
 
             <!-- Campo personalizado de valor -->
+
+            <!-- NOVA SEÇÃO: Forma de Pagamento -->
             <EditText
                 android:id="@+id/input_valor_recarga"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:hint="R$ 0,00"
-                android:gravity="center"
-                android:textSize="22sp"
-                android:inputType="numberDecimal"
                 android:layout_marginTop="20dp"
+                android:background="@drawable/borda_cinza"
                 android:fontFamily="@font/poppinsbold"
-                android:background="@drawable/borda_cinza" />
+                android:gravity="center"
+                android:hint="R$ 0,00"
+                android:inputType="numberDecimal"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/txt_forma_pagamento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Forma de Pagamento"
+                android:textSize="18sp"
+                android:textColor="#1E1E2D"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/poppinsbold" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupMetodo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp">
+
+                <RadioButton
+                    android:id="@+id/radioPix"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pix" />
+
+                <RadioButton
+                    android:id="@+id/radioCartao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cartão"
+                    android:layout_marginStart="30dp" />
+            </RadioGroup>
 
             <!-- Botão continuar -->
             <Button

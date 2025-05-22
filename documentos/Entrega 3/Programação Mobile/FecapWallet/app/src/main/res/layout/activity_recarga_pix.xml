@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_pix"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <!-- Botão voltar -->
+    <ImageView
+        android:id="@+id/img_voltar_pix"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        app:srcCompat="@drawable/btn_voltar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/img_voltar_pix"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
+            android:paddingTop="40dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_titulo_pix"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pagamento via Pix"
+                android:textSize="26sp"
+                android:textColor="#1E1E2D"
+                android:fontFamily="@font/poppinsbold" />
+
+            <ImageView
+                android:id="@+id/img_qrcode"
+                android:layout_width="230dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                app:srcCompat="@drawable/qrcode_pix" />
+
+            <TextView
+                android:id="@+id/txt_instrucao_pix"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Aponte a câmera do seu celular para o QR Code acima e siga as instruções do seu banco para concluir a recarga via Pix."
+                android:textSize="16sp"
+                android:textColor="#1E1E2D"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/poppinsmedium" />
+
+            <TextView
+                android:id="@+id/txt_chave_pix_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Chave Pix (Copia e Cola):"
+                android:textSize="16sp"
+                android:textColor="#1E1E2D"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/poppinsmedium" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/txt_chave_pix"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="00020126580014BR.GOV.BCB.PIX0136chave@exemplo.com.br5204000053039865802BR5925NOME DO RECEBEDOR6009SÃO PAULO62140510ABCD1234EFGH6304B13F"
+                    android:textSize="14sp"
+                    android:textColor="#333333"
+                    android:fontFamily="@font/poppinsregular"
+                    android:maxLines="3" />
+
+                <ImageView
+                    android:id="@+id/btn_copiar_chave"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginStart="12dp"
+                    android:src="@drawable/ic_copy"
+                    android:contentDescription="Copiar chave Pix" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_confirmar_pix"
+                android:layout_width="match_parent"
+                android:layout_height="63dp"
+                android:layout_marginTop="40dp"
+                android:backgroundTint="#20403D"
+                android:text="Confirmar Pagamento"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:fontFamily="@font/poppinsmedium"
+                app:cornerRadius="15dp" />
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

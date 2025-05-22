@@ -15,6 +15,12 @@
 <string name="alterar_senha_opcao">Alterar Senha</string>
 <string name="biometria_dialog_titulo">Ativar autenticação biométrica</string>
 <string name="biometria_dialog_subtitulo">Autentique-se para ativar o login com biometria</string>
+        <string-array name="formas_pagamento">
+            <item>Cartão de Crédito</item>
+            <item>Pix</item>
+            <item>Boleto</item>
+        </string-array>
+
 \n
 Última atualização: [21-04-2025]\n
 \n
